@@ -2,12 +2,7 @@
 
 ;; Place your private configuration here
 
-(after! clojure-mode
-  (rainbow-delimiters-mode)
-  (paredit-mode)
-  (evil-cleverparens-mode))
-
-(after! scheme-mode
-  (rainbow-delimiters-mode)
-  (paredit-mode)
-  (evil-cleverparens-mode))
+(add-hook! '(clojure-mode scheme-mode-hook)
+  #'(rainbow-delimiters-mode
+     paredit-mode
+     evil-cleverparens-mode))

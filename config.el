@@ -10,3 +10,5 @@
 ;; don't quit the REPL buffer on multiple ESC-key presses
 (set-popup-rule! "^\\* Guile REPL" :quit nil)
 (set-popup-rule! "^\\* Chicken REPL" :quit nil)
+
+(load! "bindings")
